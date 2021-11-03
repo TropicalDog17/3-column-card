@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+	box-sizing: border-box;
+	font-size: 15px;
+}
+:root {
+	/*Primary*/
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+
+	/* Neutral */
+	--transparent-white: hsla(0, 0%, 100%, 0.75); /*Paragraph*/
+	--very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons)*/
+}
+body {
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 1440px;
+	min-height: 100vh;
+}
+.wrapper {
+	width: 80vw;
+}
+section {
+	position: relative;
+	padding: 1.875rem;
+	color: var(--transparent-white);
+	line-height: 1.5;
+	padding-bottom: 5rem;
+}
+h2 {
+	font-family: "Big Shoulders Display", cursive;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+#sedan {
+	background-color: var(--bright-orange);
+}
+#suv {
+	background-color: var(--dark-cyan);
+}
+#luxury {
+	background-color: var(--very-dark-cyan);
+}
+
+.btn {
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+	transition: 0.3s;
+}
+button.btn:hover {
+	background-color: transparent;
+	border: 2px solid var(--transparent-white);
+	color: white !important;
+	opacity: 0.7;
+}
+button.btn:active {
+	opacity: 1;
+}
+#sedan .btn {
+	color: var(--bright-orange);
+}
+#suv .btn {
+	color: var(--dark-cyan);
+}
+#luxury .btn {
+	color: var(--very-dark-cyan);
+}
+@media only screen and (min-width: 375px) {
+	.wrapper {
+		display: flex;
+		max-width: 60vw;
+		min-height: 70vh;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	section {
+		flex-basis: 33%;
+	}
+}
